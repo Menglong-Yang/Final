@@ -1,0 +1,35 @@
+---
+title: "Final Project: Analysis of Diabetic Patient Data"
+author: "Menglong Yang"
+output: html_document
+---
+
+```{r, here-i-am, include = FALSE}
+here::i_am(
+  "report.Rmd"
+ )
+```
+
+The dataset contains hospital admission records of diabetic patients across 130 US hospitals over the period from 1999 to 2008. The analysis aims to explore patient demographics, hospital stay, medications, and procedures, focusing on the relationship between age and hospital stay.
+
+# Table of Patients Characteristics
+```{r, table, echo=FALSE}
+table <- readRDS(
+  here::here("output/table1.rds")
+)
+library(knitr)
+kable(table, caption = "Table of Patients Characteristics")
+```
+
+The table summarizes continuous variables like patient age, length of stay, medications, and procedures with their mean and standard decision. It also shows categories variables gender and race distributions with their count and percentage. Additionly, the age interval in the original data set was converted to median.
+
+# Boxplots of Length of Stay by Age Groups
+
+
+```{r boxplot, echo=FALSE}
+knitr::include_graphics(
+  here::here("output/boxplot.png")
+)
+```
+
+The figure is a boxplot showing the distribution of hospital length of stay across different age groups. This figure shows how hospital stays tend to vary across age groups, with older patients showing slightly longer stays in general compared to younger patients.
