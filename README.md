@@ -33,12 +33,12 @@ This project uses the **Diabetes 130-US hospitals for years 1999-2008 Data Set**
 
 ## Synchronize Package Repository
 
-- This project uses `renv` to manage R package dependencies
-- Run the command `make install` in your terminal to install all the required R packages specified in the `renv.lock` file
+- This project uses `renv` to manage R package dependencies.
+- Run the command `make install` in your terminal to install all the required R packages specified in the `renv.lock` file.
 
 The Makefile, Rmarkdown (`report.Rmd`), and HTML report will be in the root directory of the project. The Rmarkdown will contain the tables and figures produced in the analysis.
 
 ## Docker Setup
 
-- To build the Docker image, use `make docker-build`. This command builds the Docker image locally and pushes it to DockerHub using the username and image tag specified in the .
-- To generate the report and retrieve the output, use`make docker-build`. This command runs the container with the local project directory mounted to inside the container, executes the R scripts, and saves the results in the directory.
+- To build the Docker image, use `make docker-build`. This command builds the Docker image locally and pushes it to DockerHub using the username and image tag specified in the `Makefile`.
+- To generate the report and retrieve the output, use `make docker-run`. This command runs the container with the local project directory mounted to inside the container, executes the R scripts, and saves the results in the `output` directory.
