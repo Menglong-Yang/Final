@@ -36,7 +36,7 @@ This project uses the **Diabetes 130-US hospitals for years 1999-2008 Data Set**
 This project uses **renv** to manage R package dependencies.  
 Run the following command in your terminal to install all the required R packages specified in the file **renv.lock**.
 
-The **Makefile**, **report.Rmd**, and HTML report will be in the root directory of the project. The Rmarkdown will contain the tables and figures produced in the analysis.
+The **Makefile**, ``report.Rmd``, and HTML report will be in the root directory of the project. The Rmarkdown will contain the tables and figures produced in the analysis.
 
 ## Docker Setup
 
