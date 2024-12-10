@@ -8,7 +8,7 @@ docker-build:
 	docker build -t $(DOCKER_USERNAME)/$(DOCKER_IMAGE_TAG) .
 	docker push $(DOCKER_USERNAME)/$(DOCKER_IMAGE_TAG)
 
-docker-run: code/03_render_report.R report.Rmd table boxplot
+docker-run: code/03_render_report.R report.Rmd table boxplot install
 	docker run --rm -v $(WORKDIR):/home/rstudio/project $(DOCKER_USERNAME)/$(DOCKER_IMAGE_TAG) Rscript code/03_render_report.R
 
 output/data_clean.rds: code/00_clean_data.R data/diabetic_data.csv
